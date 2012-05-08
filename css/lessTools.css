@@ -1,0 +1,19 @@
+/* CSS3 PIE makes my life better by catching IEs up to CSS3. Learn more: css3pie.com */
+.pie {
+  behavior: url(/css/PIE.php);
+}
+/* =heyCMSteam : Make sure this path stays absolute and is adjusted once you toss this in a theme folder deeper in the CMS's folder structure. */
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+/* Doesn't need the extraneous 'clearfix' class (although that's down the page ;) */.cssClear {
+  width: 100%;
+  overflow: hidden;
+}
+/* Big Thanks to Nick Sergeant for his list of LESS Mixins: http://tinyurl.com/3upmpoy */

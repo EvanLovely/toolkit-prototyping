@@ -1,0 +1,91 @@
+/* Mixins */
+.liquidBG {
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+/* If an img doesn't have a width, let's assume one of it's ancestor's does, so let's not break out of it. */
+img.liquid {
+  width: 100%;
+}
+/* Components */
+.img {
+  background: transparent url(img/img.png) no-repeat center center;
+}
+.img.wide {
+  background: transparent url(img/img-wide.png) no-repeat center center;
+}
+.c-video {
+  background: transparent url(img/video.png) no-repeat center center;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+/* Makes a tiny row of floated links commonly seen in headers and footers for secondary navigation */
+nav.tiny ul li {
+  list-style-type: none;
+  float: left;
+  padding: 3px 7px;
+  border-right: solid 1px black;
+}
+nav.tiny ul li a {
+  color: #0090FF;
+}
+nav.tiny ul li:last-child {
+  border-right: none;
+}
+/* Presentational Classes that allow the bad habit of styling with HTML, which speeds up prototyping. */
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+img.floatLeft {
+  margin: 0 5px 5px 0;
+}
+img.floatRight {
+  margin: 0 0 5px 5px;
+}
+.clear {
+  clear: both;
+}
+.a-top,
+.a-bottom,
+.a-left,
+.a-right {
+  position: absolute;
+}
+.a-top {
+  top: 5px;
+}
+.a-bottom {
+  bottom: 5px;
+}
+.a-left {
+  left: 5px;
+}
+.a-right {
+  right: 5px;
+}
+/* Typical Layouts */
+.fourBlocks .block {
+  width: 22%;
+  margin-right: 2%;
+  float: left;
+}
+/* JS Lib Styles */
+/* tooltip styling. by default the element to be styled is .tooltip  */
+.tooltip {
+  display: none;
+  background: transparent url(flowplayer-img/black_arrow.png);
+  font-size: 12px;
+  height: 70px;
+  width: 160px;
+  padding: 25px;
+  color: #fff;
+}

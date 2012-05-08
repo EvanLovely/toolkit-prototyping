@@ -1,0 +1,112 @@
+
+/*
+	root element for the scrollable.
+	when scrolling occurs this element stays still.
+*/
+.scrollable {
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	width: 91%;
+}
+.scrollStyle1 .scrollable {
+	height:120px;
+}
+.scrollStyle2 .scrollable {
+	height: 200px;
+	margin:0 0 0 29px;
+}
+div.scrollStyle3 .scrollable {
+	height: 250px;
+	background:white !important;
+	border: 0 !important;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+div.scrollStyle3 .scrollable .item {
+	height: inherit;
+	background:transparent;
+	border: 0;
+	margin:0;
+	padding:0;
+	width: 200px;
+}
+.scrollStyle3 {
+	position:relative;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom:20px;
+}
+.scrollStyle3 .browse {
+	position:absolute;
+	bottom: 0;
+	z-index: 10;
+}
+.scrollStyle3 .left {
+	right: 30px;
+}
+.scrollStyle3 .right {
+	right: 0;
+}
+div.scrollStyle4 .scrollable, div.scrollStyle4 img {
+	height: 223px;
+	width:520px;
+}
+div.scrollStyle4 .scrollable .item {
+	width: 520px;
+	height: inherit;
+}
+div.scrollStyle5 .scrollable .pane {
+	width: 356px;
+	height: 242px;	
+}
+div.scrollStyle5 .scrollable {
+	width: 356px;
+	height: 242px;
+}
+/*
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a extremely large width to accomodate scrollable items.
+	it's enough that you set the width and height for the root element and
+	not for this element.
+*/
+.scrollable .items {
+	/* this cannot be too large */
+	width:20000em;
+	position:absolute;
+	clear:both;
+}
+
+.items .pane {
+	float:left;
+}
+.pane .item {
+	float:left;
+}
+/*
+
+.scrollable img {
+	float:left;
+	margin:20px 5px 20px 21px;
+	background-color:#fff;
+	padding:2px;
+	border:1px solid #ccc;
+	width:100px;
+	height:75px;
+	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+*/
+
+/* active item */
+.scrollable .active {
+	border:2px solid #000;
+	position:relative;
+	cursor:default;
+}
+
+

@@ -1,0 +1,64 @@
+/* CSS3 PIE makes my life better by catching IEs up to CSS3. Learn more: css3pie.com */
+.pie {
+	behavior: url(/css/PIE.php);
+}
+/* =heyCMSteam : Make sure this path stays absolute and is adjusted once you toss this in a theme folder deeper in the CMS's folder structure. */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+/* Doesn't need the extraneous 'clearfix' class (although that's down the page ;) */ 
+.cssClear {
+	width: 100%;
+	overflow: hidden;
+}
+/* Big Thanks to Nick Sergeant for his list of LESS Mixins: http://tinyurl.com/3upmpoy */
+.border-radius(@radius: 10px) {
+    -webkit-background-clip: padding-box;
+    -webkit-border-radius: @radius;
+    -moz-background-clip: padding-box;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    background-clip: padding-box;
+    .pie;
+}
+.box-shadow(@horizontal: 0px, @vertical: 1px, @blur: 2px, @color: #CCC) {
+  -webkit-box-shadow: @horizontal @vertical @blur @color;
+  -moz-box-shadow: @horizontal @vertical @blur @color;
+  box-shadow: @horizontal @vertical @blur @color;
+  .pie;
+}
+.inset-box-shadow(@horizontal: 0px, @vertical: 1px, @blur: 2px, @color: #CCC) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur @color;
+  -moz-box-shadow: inset @horizontal @vertical @blur @color;
+  box-shadow: inset @horizontal @vertical @blur @color;
+}
+.multi-color-border(@top, @sides, @bottom) {
+    border-top: 1px solid @top;
+    border-left: 1px solid @sides;
+    border-right: 1px solid @sides;
+    border-bottom: 1px solid @bottom;
+}
+.multi-rounded-corners(@topLeft: 5px, @topRight: 5px, @bottomRight: 5px, @bottomLeft: 5px) {
+    -webkit-border-top-left-radius: @topLeft;
+    -webkit-border-top-right-radius: @topRight;
+    -webkit-border-bottom-right-radius: @bottomRight;
+    -webkit-border-bottom-left-radius: @bottomLeft;
+    -moz-border-radius-topleft: @topLeft;
+    -moz-border-radius-topright: @topRight;
+    -moz-border-radius-bottomright: @bottomRight;
+    -moz-border-radius-bottomleft: @bottomLeft;
+    border-top-left-radius: @topLeft;
+    border-top-right-radius: @topRight;
+    border-bottom-right-radius: @bottomRight;
+    border-bottom-left-radius: @bottomLeft;
+	.pie;
+}
+.vertical-gradient(@start: #000, @stop: #FFF) {
+    background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+    background: -webkit-linear-gradient(@start, @stop);
+    background: -moz-linear-gradient(center top, @start 0%, @stop 100%);
+    background: -moz-gradient(center top, @start 0%, @stop 100%);
+	background: linear-gradient(@start, @stop);
+	-pie-background: linear-gradient(@start, @stop);
+	.pie;
+}
